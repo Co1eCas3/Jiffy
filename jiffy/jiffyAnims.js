@@ -1,39 +1,38 @@
 const anims = {};
 
-anims.trans_props = `.JIFFY__trans-props {
+(anims.trans_props = `.JIFFY__trans-props {
     animation-duration: .5s;
     animation-delay: 0s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-play-state: running;
-  }`,
-
-anims.slide = {
-  name: 'slide',
-  hasDir: true,
-  rules: {
-    right: `@keyframes slide-right {
+  }`),
+  (anims.slide = {
+    name: "slide",
+    hasDir: true,
+    rules: {
+      right: `@keyframes slide-right {
       from { transform: translateX(0) }
       to { transform: translateX(120%) }
     }`,
-    left: `@keyframes slide-left {
+      left: `@keyframes slide-left {
       from { transform: translateX(0) }
       to { transform: translateX(-120%) }
     }`
-  }
-}
+    }
+  });
 
 anims.blur = {
-  name: 'blur',
+  name: "blur",
   hasDir: false,
   rule: `@keyframes blur {
     from { filter: blur(0); }
     to { filter: blur(20px); }
-  }` 
-}
+  }`
+};
 
 anims.cartwheel = {
-  name: 'cartwheel',
+  name: "cartwheel",
   hasDir: true,
   rules: {
     left: `@keyframes cartwheel-left {
@@ -57,4 +56,4 @@ anims.cartwheel = {
       }
     }`
   }
-}
+};
